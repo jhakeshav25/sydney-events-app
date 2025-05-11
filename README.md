@@ -50,9 +50,18 @@ A minimalistic web application that automatically scrapes and displays events ha
    ```
 
 ## 📄 License
-
 This project is open-source and free to use under the MIT License.
 
-## 📬 Feedback
+## 📷 Screenshots
+- Home page listing events with title and Get Tickets form.
+- Simple and responsive design.
 
-Feel free to open issues or pull requests. For suggestions, email:jhakeshav616@gmail.com
+## 📩 Future Improvements
+- Add database storage and user authentication.
+- Integrate with Telegram or WhatsApp for event notifications.
+- Enable real-time updates and notifications via email.
+---
+## 📬 Feedback
+Feel free to open issues or pull requests. 
+For suggestions,email:jhakeshav616@gmail.com
+© 2025 | Built by Keshav Kumar Jha
