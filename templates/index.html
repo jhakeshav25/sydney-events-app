@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sydney Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .event {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .event h2 {
+      margin: 0 0 10px;
+    }
+    .event form {
+      display: flex;
+      flex-direction: column;
+    }
+    .event input[type="email"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .event button {
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .event button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sydney Events</h1>
+  {% for event in events %}
+    <div class="event">
+      <h2>{{ event.title }}</h2>
+      <form action="/get_ticket" method="POST">
+        <!-- Hidden input field to pass the event URL -->
+        <input type="hidden" name="event_url" value="{{ event.url }}">
+        <!-- User email input field -->
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <!-- Submit button for the form -->
+        <button type="submit">Get Tickets</button>
+      </form>
+    </div>
+  {% endfor %}
+</body>
+</html>
