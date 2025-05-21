@@ -23,5 +23,7 @@ def get_ticket():
     print(f"User {email} wants to attend {event_url}")  # You can log or store this information
     return redirect(event_url)  # Redirect to event URL
 
-# Remove app.run() — PythonAnywhere runs the app through WSGI
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
